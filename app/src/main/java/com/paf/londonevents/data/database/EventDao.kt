@@ -13,7 +13,7 @@ interface EventDao {
     fun getFavoriteEventWithId(id: String): Observable<Event>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertEvent(event: Event)
+    fun insertEvent(event: Event)
 
     @Delete
     fun delete(event: Event)

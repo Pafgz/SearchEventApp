@@ -32,23 +32,11 @@ class EventListParser: JSONParser<List<Event>> {
 
         val eventName: String? = json("name")
         val venueName: String? = parseVenueName(json)
-        val imageUri: Uri? = parseImage(json)
+        val imageUri: Uri? = ImageParser().parse(json)
         val startDateTime: Date? = parseDate(json)
         val id: String = json("id") ?: getRandomString()
 
         return Event(eventName, venueName, imageUri, startDateTime, false, id)
-    }
-
-    private fun parseImage(json: JSON): Uri? {
-        val images = json.jsonArrayOrNull("images")
-        return if (images != null && images.length() > 0){
-            val item = JSON(images[5].toString())
-            val url: String? = item("url")
-            Uri.parse(url)
-        }
-        else {
-            null
-        }
     }
 
     private fun parseVenueName(json: JSON): String?{
