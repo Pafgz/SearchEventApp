@@ -10,6 +10,7 @@ import com.paf.londonevents.data.database.EventDao
 import com.paf.londonevents.data.parsers.EventListParser
 import com.paf.londonevents.domain.service.EventsService
 import io.reactivex.Observable
+import io.reactivex.rxkotlin.Observables
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.withContext
 import retrofit2.Call
@@ -20,10 +21,23 @@ object EventsRepository: EventsRemoteDataSource, HasDependencies {
 
     private val service : EventsService by lazy { getDependency<EventsService>() }
     private val localEventService: EventDao by lazy { MainApplication.database.eventDao() }
-    private val favoriteList = ArrayList<Event>()
 
     override fun searchEvents(eventTitle: String?): Observable<List<Event>> {
-        
+        val events = getEventsWithParams(eventTitle)
+        val favorites = loadFavoriteEvents()
+        return Observables.zip(events, favorites) { eventList, favoriteList ->
+
+            eventList.forEach { event ->
+                if(favoriteList.any { event.id == it.id }){
+                    event.isFavorite = true
+                }
+            }
+            eventList
+        }
+    }
+
+
+    private fun getEventsWithParams(eventTitle: String?): Observable<List<Event>> {
         return Observable.create { emitter ->
 
             val params =  HashMap<String, String>()
@@ -36,12 +50,6 @@ object EventsRepository: EventsRemoteDataSource, HasDependencies {
                 override fun onResponse(call: Call<String>, response: Response<String>) {
                     val json = JSON(response.body())
                     val apiList = EventListParser().parse(json)
-
-                    /*apiList.forEach {event ->
-                        if(favoriteList.any { event.id == it.id }){
-                            event.isFavorite = true
-                        }
-                    }*/
 
                     emitter.onNext(apiList)
                 }
