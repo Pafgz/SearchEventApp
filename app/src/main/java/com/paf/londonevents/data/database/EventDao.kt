@@ -6,7 +6,7 @@ import io.reactivex.Observable
 
 @Dao
 interface EventDao {
-    @Query("SELECT * FROM event")
+    @Query("SELECT * FROM event WHERE is_favorite = 1")
     fun getAllFavoriteEvents(): Observable<List<Event>>
 
     @Query("SELECT * FROM event WHERE id = :id AND is_favorite = 1")
@@ -14,9 +14,6 @@ interface EventDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertEvent(event: Event)
-
-    @Insert
-    fun insertAnEvent(event: Event)
 
     @Delete
     fun delete(event: Event)

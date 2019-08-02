@@ -1,0 +1,669 @@
+{
+  "_embedded": {
+    "events": [
+      {
+        "name": "Chivas Guadalajara v. Club America",
+        "type": "event",
+        "id": "vvG18Z4m501KZN",
+        "test": false,
+        "url": "https://www.ticketmaster.com/chivas-guadalajara-v-club-america-chicago-illinois-09-08-2019/event/040056E2E4293023",
+        "locale": "en-us",
+        "images": [
+          {
+            "ratio": "4_3",
+            "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_CUSTOM.jpg",
+            "width": 305,
+            "height": 225,
+            "fallback": false
+          },
+          {
+            "ratio": "16_9",
+            "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_RECOMENDATION_16_9.jpg",
+            "width": 100,
+            "height": 56,
+            "fallback": false
+          },
+          {
+            "ratio": "16_9",
+            "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+            "width": 2048,
+            "height": 1152,
+            "fallback": false
+          },
+          {
+            "ratio": "3_2",
+            "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_RETINA_PORTRAIT_3_2.jpg",
+            "width": 640,
+            "height": 427,
+            "fallback": false
+          },
+          {
+            "ratio": "16_9",
+            "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_TABLET_LANDSCAPE_16_9.jpg",
+            "width": 1024,
+            "height": 576,
+            "fallback": false
+          },
+          {
+            "ratio": "16_9",
+            "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_RETINA_LANDSCAPE_16_9.jpg",
+            "width": 1136,
+            "height": 639,
+            "fallback": false
+          },
+          {
+            "ratio": "16_9",
+            "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_RETINA_PORTRAIT_16_9.jpg",
+            "width": 640,
+            "height": 360,
+            "fallback": false
+          },
+          {
+            "ratio": "3_2",
+            "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_ARTIST_PAGE_3_2.jpg",
+            "width": 305,
+            "height": 203,
+            "fallback": false
+          },
+          {
+            "ratio": "16_9",
+            "url": "https://s1.ticketm.net/dbimages/360618a.jpg",
+            "width": 205,
+            "height": 115,
+            "fallback": false
+          },
+          {
+            "ratio": "3_2",
+            "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_TABLET_LANDSCAPE_3_2.jpg",
+            "width": 1024,
+            "height": 683,
+            "fallback": false
+          }
+        ],
+        "sales": {
+          "public": {
+            "startDateTime": "2019-07-17T17:00:00Z",
+            "startTBD": false,
+            "endDateTime": "2019-09-08T05:00:00Z"
+          },
+          "presales": [
+            {
+              "startDateTime": "2019-07-15T17:00:00Z",
+              "endDateTime": "2019-07-20T04:59:00Z",
+              "name": "Bears Season Club Holders Presale"
+            },
+            {
+              "startDateTime": "2019-07-16T15:00:00Z",
+              "endDateTime": "2019-07-17T03:00:00Z",
+              "name": "Venue Presale"
+            }
+          ]
+        },
+        "dates": {
+          "start": {
+            "localDate": "2019-09-08",
+            "localTime": "17:30:00",
+            "dateTime": "2019-09-08T22:30:00Z",
+            "dateTBD": false,
+            "dateTBA": false,
+            "timeTBA": false,
+            "noSpecificTime": false
+          },
+          "timezone": "America/Chicago",
+          "status": {
+            "code": "onsale"
+          },
+          "spanMultipleDays": false
+        },
+        "classifications": [
+          {
+            "primary": true,
+            "segment": {
+              "id": "KZFzniwnSyZfZ7v7nE",
+              "name": "Sports"
+            },
+            "genre": {
+              "id": "KnvZfZ7vA7E",
+              "name": "Soccer"
+            },
+            "subGenre": {
+              "id": "KZazBEonSMnZfZ7vFtt",
+              "name": "Soccer"
+            },
+            "type": {
+              "id": "KZAyXgnZfZ7v7nI",
+              "name": "Undefined"
+            },
+            "subType": {
+              "id": "KZFzBErXgnZfZ7v7lJ",
+              "name": "Undefined"
+            },
+            "family": false
+          }
+        ],
+        "promoter": {
+          "id": "494",
+          "name": "PROMOTED BY VENUE",
+          "description": "PROMOTED BY VENUE / NTL / USA"
+        },
+        "promoters": [
+          {
+            "id": "494",
+            "name": "PROMOTED BY VENUE",
+            "description": "PROMOTED BY VENUE / NTL / USA"
+          }
+        ],
+        "priceRanges": [
+          {
+            "type": "standard",
+            "currency": "USD",
+            "min": 45,
+            "max": 300
+          }
+        ],
+        "seatmap": {
+          "staticUrl": "https://s1.ticketm.net/tmimages/venue/maps/ch1/94907s.gif"
+        },
+        "accessibility": {
+          "info": "Accessible seating, mobility, sight & hearing impaired seating  is available in all price levels.  ADA seating locations may vary depending on the type of show and configuration of each event.\r\nIn general, ADA accessible seating is located at the back of seating sections on 100, 200 and 300 Levels of the bowl.  For concerts, a raised ADA platform is provide for accessible seating on the floor.\r\nTicketmaster sales of accessible seating is limited to MAXIUM of (4) tickets. \r\nIf there is a hearing-impaired request or a larger request for accessible seating, please direct the order to Elizabeth Saah at the Soldier Field Box Office at (312) 235-7000 or boxoffice@soldierfield.net.                   \r\nHandicapped accessible elevators are located in the North Parking Garage, the United Club, the South Courtyard, and West Mezzanine."
+        },
+        "_links": {
+          "self": {
+            "href": "/discovery/v2/events/vvG18Z4m501KZN?locale=en-us"
+          },
+          "attractions": [
+            {
+              "href": "/discovery/v2/attractions/K8vZ917b3PV?locale=en-us"
+            },
+            {
+              "href": "/discovery/v2/attractions/K8vZ917C-07?locale=en-us"
+            },
+            {
+              "href": "/discovery/v2/attractions/K8vZ9175Dp0?locale=en-us"
+            }
+          ],
+          "venues": [
+            {
+              "href": "/discovery/v2/venues/KovZpZAF6tIA?locale=en-us"
+            }
+          ]
+        },
+        "_embedded": {
+          "venues": [
+            {
+              "name": "Soldier Field",
+              "type": "venue",
+              "id": "KovZpZAF6tIA",
+              "test": false,
+              "url": "https://www.ticketmaster.com/soldier-field-tickets-chicago/venue/32827",
+              "locale": "en-us",
+              "images": [
+                {
+                  "ratio": "3_1",
+                  "url": "https://s1.ticketm.net/dam/v/b06/12fabbf7-94ac-4cb9-af52-77974b522b06_380371_SOURCE.jpg",
+                  "width": 1500,
+                  "height": 500,
+                  "fallback": false
+                },
+                {
+                  "ratio": "3_1",
+                  "url": "https://s1.ticketm.net/dam/v/b06/12fabbf7-94ac-4cb9-af52-77974b522b06_380371_SOURCE.jpg",
+                  "width": 1500,
+                  "height": 500,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dbimages/7047v.jpg",
+                  "width": 205,
+                  "height": 115,
+                  "fallback": false
+                }
+              ],
+              "postalCode": "60605",
+              "timezone": "America/Chicago",
+              "city": {
+                "name": "Chicago"
+              },
+              "state": {
+                "name": "Illinois",
+                "stateCode": "IL"
+              },
+              "country": {
+                "name": "United States Of America",
+                "countryCode": "US"
+              },
+              "address": {
+                "line1": "1410 S. Museum Campus Drive"
+              },
+              "location": {
+                "longitude": "-87.61682143",
+                "latitude": "41.86205404"
+              },
+              "markets": [
+                {
+                  "name": "Chicagoland and Northern Il",
+                  "id": "3"
+                },
+                {
+                  "name": "Central Illinois",
+                  "id": "54"
+                }
+              ],
+              "dmas": [
+                {
+                  "id": 242
+                },
+                {
+                  "id": 249
+                },
+                {
+                  "id": 357
+                },
+                {
+                  "id": 373
+                }
+              ],
+              "social": {
+                "twitter": {
+                  "handle": "@SoldierField"
+                }
+              },
+              "boxOfficeInfo": {
+                "phoneNumberDetail": "For non Bears events please call (312) 235-7000",
+                "openHoursDetail": "Chicago Bears ticket office is available by phone Monday-Friday 8am-5pm CST. The Soldier Field Box Office is open only on game days, their phone number is (312) 235-7000.",
+                "acceptedPaymentDetail": "The Box Office accepts cash only for Chicago Bears games. Soldier Field games accept Visa, Mastercard, American Express, Cash.",
+                "willCallDetail": "Chicago Bears events: Tickets may be picked up at the Will Call Window outside of Gate 10, 2 hours before the event. Gate 10 is located on the southeast side of Soldier Field. Customers must have the actual credit card, picture ID and the confirmation number to receive their tickets. Soldier Field events: Will Call is available on the day of the event only. Government issued photo i.d. and the credit card used for the purchase will be required to claim tickets. Typically will call opens 90 minutes to an hour before the scheduled event."
+              },
+              "parkingDetail": "Chicago Bears Parking Information: All of the spaces in the on-site parking lots near Soldier Field are pre-sold for the entire season to Bears season ticket holders. If you do not have a pre-paid coupon, here are some options for you: If you prefer to tailgate before the Bears games, you can park in the 31st Street McCormick Place Lot. It costs $16 and there are shuttle buses to bring you to the 18th Street Shuttle Turnaround, directly across from the stadium. You can also walk to the stadium from the 31st Street Lot. If you don't want to tailgate, we recommend you park in the East Monroe Street / Millennium Park garages, located at Columbus Drive and Monroe Street. It costs $13 and you can then take the free shuttle directly to the 18th Street Shuttle Turnaround. The shuttle bus takes about 10 minutes because it travels on a specially designed bus way which keeps it out of most Soldier Field traffic. There are over 40 buses continuously shuttling fans beginning five hours prior to kickoff. Lastly, we recommend taking public transportation. The Transportation Center, located northeast of the stadium (at the corner of McFetridge and Museum Campus Drive) is where the CTA, Metra shuttle, and PACE bus services will be available for fans drop-off and pick-up. The CTA's train service for the Red, Orange or Green Lines are available at the Roosevelt Road and State Street Station. For schedule and route information, please contact: RTA (312) 836-7000 or rtachicago.com CTA (888) YOUR-CTA or transitchicago.com",
+              "accessibleSeatingDetail": "Accessible Seating Information for Chicago Bears games: For Chicago Bears accessible seating please purchase the best available seating and contact the Chicago Bears at 847-615-2327 for an exchange after purchase is complete. Accessible Seating Information for Other Soldier Field events: Accessible seating is available through Ticketmaster. Do NOT contact the Chicago Bears for accessible seating information on non-Bears events at Soldier Field",
+              "generalInfo": {
+                "generalRule": "Cameras and recording devices are N O T permitted. No umbrellas, cans, or bottles can be brought into the stadium. Chicago Bears: The Smoke Free Act prohibits smoking in all public venues. In order to be compliant with the Smoke-Free Illinois Act, smoking will be prohibited at all Chicago Bears events at Soldier Field. There will be no designated smoking areas inside or outside of the stadium, and re-entry is prohibited. The smoking policy will be strictly enforced. Violaters are subject to ejection from the stadium; repeated violations can resultin the result in the forfeiting of ticket privileges. Ushers and security officers will be enforcing the new smoke-free policy. First-time violaters of the smoking policy will be asked to exchange their ticket for a \"Smoking Card\". Any patron refusing to exchange thier ticket will be ejected from the stadium. If a patron is then smoking in the stadium for a second time, he or she will be ejected.",
+                "childRule": "Our policy is that if your child can walk under the turnstiles (approximately 32 inches) then you should go to Gate 10 on the south east side of Soldier Field on gameday to receive a complimentary lap pass for that day's game for the child. The child will have to sit on a ticketed patron’s lap for the game. The entire party will then be admitted to the stadium at Gate 10. Strollers are not permitted in the stadium."
+              },
+              "upcomingEvents": {
+                "_total": 68,
+                "tmr": 55,
+                "ticketmaster": 13
+              },
+              "_links": {
+                "self": {
+                  "href": "/discovery/v2/venues/KovZpZAF6tIA?locale=en-us"
+                }
+              }
+            }
+          ],
+          "attractions": [
+            {
+              "name": "Super Clasico",
+              "type": "attraction",
+              "id": "K8vZ917b3PV",
+              "test": false,
+              "url": "https://www.ticketmaster.com/super-clasico-tickets/artist/2667514",
+              "locale": "en-us",
+              "images": [
+                {
+                  "ratio": "4_3",
+                  "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_CUSTOM.jpg",
+                  "width": 305,
+                  "height": 225,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_RECOMENDATION_16_9.jpg",
+                  "width": 100,
+                  "height": 56,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+                  "width": 2048,
+                  "height": 1152,
+                  "fallback": false
+                },
+                {
+                  "ratio": "3_2",
+                  "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_RETINA_PORTRAIT_3_2.jpg",
+                  "width": 640,
+                  "height": 427,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_TABLET_LANDSCAPE_16_9.jpg",
+                  "width": 1024,
+                  "height": 576,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_RETINA_LANDSCAPE_16_9.jpg",
+                  "width": 1136,
+                  "height": 639,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_RETINA_PORTRAIT_16_9.jpg",
+                  "width": 640,
+                  "height": 360,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_EVENT_DETAIL_PAGE_16_9.jpg",
+                  "width": 205,
+                  "height": 115,
+                  "fallback": false
+                },
+                {
+                  "ratio": "3_2",
+                  "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_ARTIST_PAGE_3_2.jpg",
+                  "width": 305,
+                  "height": 203,
+                  "fallback": false
+                },
+                {
+                  "ratio": "3_2",
+                  "url": "https://s1.ticketm.net/dam/a/10d/792ce874-3198-400b-9e69-f9ce8293a10d_1113381_TABLET_LANDSCAPE_3_2.jpg",
+                  "width": 1024,
+                  "height": 683,
+                  "fallback": false
+                }
+              ],
+              "classifications": [
+                {
+                  "primary": true,
+                  "segment": {
+                    "id": "KZFzniwnSyZfZ7v7nE",
+                    "name": "Sports"
+                  },
+                  "genre": {
+                    "id": "KnvZfZ7vA7E",
+                    "name": "Soccer"
+                  },
+                  "subGenre": {
+                    "id": "KZazBEonSMnZfZ7vFtt",
+                    "name": "Soccer"
+                  },
+                  "type": {
+                    "id": "KZAyXgnZfZ7v7lt",
+                    "name": "Event Style"
+                  },
+                  "subType": {
+                    "id": "KZFzBErXgnZfZ7vAkJ",
+                    "name": "Competition"
+                  },
+                  "family": false
+                }
+              ],
+              "upcomingEvents": {
+                "_total": 1,
+                "ticketmaster": 1
+              },
+              "_links": {
+                "self": {
+                  "href": "/discovery/v2/attractions/K8vZ917b3PV?locale=en-us"
+                }
+              }
+            },
+            {
+              "name": "Chivas Guadalajara",
+              "type": "attraction",
+              "id": "K8vZ917C-07",
+              "test": false,
+              "url": "https://www.ticketmaster.com/chivas-guadalajara-tickets/artist/1599142",
+              "locale": "en-us",
+              "images": [
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/cdb/2255fc32-a425-41eb-91d7-608cd04a6cdb_785251_RETINA_LANDSCAPE_16_9.jpg",
+                  "width": 1136,
+                  "height": 639,
+                  "fallback": false
+                },
+                {
+                  "ratio": "3_2",
+                  "url": "https://s1.ticketm.net/dam/a/cdb/2255fc32-a425-41eb-91d7-608cd04a6cdb_785251_RETINA_PORTRAIT_3_2.jpg",
+                  "width": 640,
+                  "height": 427,
+                  "fallback": false
+                },
+                {
+                  "ratio": "3_2",
+                  "url": "https://s1.ticketm.net/dam/a/cdb/2255fc32-a425-41eb-91d7-608cd04a6cdb_785251_ARTIST_PAGE_3_2.jpg",
+                  "width": 305,
+                  "height": 203,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/cdb/2255fc32-a425-41eb-91d7-608cd04a6cdb_785251_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+                  "width": 2048,
+                  "height": 1152,
+                  "fallback": false
+                },
+                {
+                  "ratio": "3_2",
+                  "url": "https://s1.ticketm.net/dam/a/cdb/2255fc32-a425-41eb-91d7-608cd04a6cdb_785251_TABLET_LANDSCAPE_3_2.jpg",
+                  "width": 1024,
+                  "height": 683,
+                  "fallback": false
+                },
+                {
+                  "ratio": "4_3",
+                  "url": "https://s1.ticketm.net/dam/a/cdb/2255fc32-a425-41eb-91d7-608cd04a6cdb_785251_CUSTOM.jpg",
+                  "width": 305,
+                  "height": 225,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/cdb/2255fc32-a425-41eb-91d7-608cd04a6cdb_785251_EVENT_DETAIL_PAGE_16_9.jpg",
+                  "width": 205,
+                  "height": 115,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/cdb/2255fc32-a425-41eb-91d7-608cd04a6cdb_785251_RECOMENDATION_16_9.jpg",
+                  "width": 100,
+                  "height": 56,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/cdb/2255fc32-a425-41eb-91d7-608cd04a6cdb_785251_TABLET_LANDSCAPE_16_9.jpg",
+                  "width": 1024,
+                  "height": 576,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/cdb/2255fc32-a425-41eb-91d7-608cd04a6cdb_785251_RETINA_PORTRAIT_16_9.jpg",
+                  "width": 640,
+                  "height": 360,
+                  "fallback": false
+                }
+              ],
+              "classifications": [
+                {
+                  "primary": true,
+                  "segment": {
+                    "id": "KZFzniwnSyZfZ7v7nE",
+                    "name": "Sports"
+                  },
+                  "genre": {
+                    "id": "KnvZfZ7vA7E",
+                    "name": "Soccer"
+                  },
+                  "subGenre": {
+                    "id": "KZazBEonSMnZfZ7vFtt",
+                    "name": "Soccer"
+                  },
+                  "type": {
+                    "id": "KZAyXgnZfZ7v7nI",
+                    "name": "Undefined"
+                  },
+                  "subType": {
+                    "id": "KZFzBErXgnZfZ7v7lJ",
+                    "name": "Undefined"
+                  },
+                  "family": false
+                }
+              ],
+              "upcomingEvents": {
+                "_total": 3,
+                "tmr": 1,
+                "ticketmaster": 2
+              },
+              "_links": {
+                "self": {
+                  "href": "/discovery/v2/attractions/K8vZ917C-07?locale=en-us"
+                }
+              }
+            },
+            {
+              "name": "Club America",
+              "type": "attraction",
+              "id": "K8vZ9175Dp0",
+              "test": false,
+              "url": "https://www.ticketmaster.com/club-america-tickets/artist/1038944",
+              "locale": "en-us",
+              "images": [
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/ebe/46287929-acd2-42f1-9119-a19e26e3febe_195491_RETINA_PORTRAIT_16_9.jpg",
+                  "width": 640,
+                  "height": 360,
+                  "fallback": false
+                },
+                {
+                  "ratio": "3_2",
+                  "url": "https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_PORTRAIT_3_2.jpg",
+                  "width": 640,
+                  "height": 427,
+                  "fallback": true
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dbimages/73670a",
+                  "width": 205,
+                  "height": 115,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+                  "width": 2048,
+                  "height": 1152,
+                  "fallback": true
+                },
+                {
+                  "ratio": "3_2",
+                  "url": "https://s1.ticketm.net/dam/a/ebe/46287929-acd2-42f1-9119-a19e26e3febe_195491_ARTIST_PAGE_3_2.jpg",
+                  "width": 305,
+                  "height": 203,
+                  "fallback": false
+                },
+                {
+                  "ratio": "3_2",
+                  "url": "https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_TABLET_LANDSCAPE_3_2.jpg",
+                  "width": 1024,
+                  "height": 683,
+                  "fallback": true
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_TABLET_LANDSCAPE_16_9.jpg",
+                  "width": 1024,
+                  "height": 576,
+                  "fallback": true
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/a/ebe/46287929-acd2-42f1-9119-a19e26e3febe_195491_RECOMENDATION_16_9.jpg",
+                  "width": 100,
+                  "height": 56,
+                  "fallback": false
+                },
+                {
+                  "ratio": "4_3",
+                  "url": "https://s1.ticketm.net/dbimages/202108a.jpg",
+                  "width": 305,
+                  "height": 225,
+                  "fallback": false
+                },
+                {
+                  "ratio": "16_9",
+                  "url": "https://s1.ticketm.net/dam/c/f9a/3c3c0a9d-033f-47b3-9621-7b554d80df9a_106241_RETINA_LANDSCAPE_16_9.jpg",
+                  "width": 1136,
+                  "height": 639,
+                  "fallback": true
+                }
+              ],
+              "classifications": [
+                {
+                  "primary": true,
+                  "segment": {
+                    "id": "KZFzniwnSyZfZ7v7nE",
+                    "name": "Sports"
+                  },
+                  "genre": {
+                    "id": "KnvZfZ7vA7E",
+                    "name": "Soccer"
+                  },
+                  "subGenre": {
+                    "id": "KZazBEonSMnZfZ7vFtt",
+                    "name": "Soccer"
+                  },
+                  "type": {
+                    "id": "KZAyXgnZfZ7v7nI",
+                    "name": "Undefined"
+                  },
+                  "subType": {
+                    "id": "KZFzBErXgnZfZ7v7lJ",
+                    "name": "Undefined"
+                  },
+                  "family": false
+                }
+              ],
+              "upcomingEvents": {
+                "_total": 7,
+                "tmr": 2,
+                "ticketmaster": 5
+              },
+              "_links": {
+                "self": {
+                  "href": "/discovery/v2/attractions/K8vZ9175Dp0?locale=en-us"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "_links": {
+    "first": {
+      "href": "/discovery/v2/events?city=chicago&locale=en-us&page=0&size=1"
+    },
+    "self": {
+      "href": "/discovery/v2/events?size=1&city=chicago&page=0&locale=en-us"
+    },
+    "next": {
+      "href": "/discovery/v2/events?city=chicago&locale=en-us&page=1&size=1"
+    },
+    "last": {
+      "href": "/discovery/v2/events?city=chicago&locale=en-us&page=4000&size=1"
+    }
+  },
+  "page": {
+    "size": 1,
+    "totalElements": 4001,
+    "totalPages": 4001,
+    "number": 0
+  }
+}

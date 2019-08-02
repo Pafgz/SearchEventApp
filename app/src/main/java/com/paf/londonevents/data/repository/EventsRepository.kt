@@ -6,6 +6,7 @@ import com.paf.londonevents.app.getDependency
 import com.paf.londonevents.core.datasource.EventsRemoteDataSource
 import com.paf.londonevents.core.model.Event
 import com.paf.londonevents.data.common.JSON
+import com.paf.londonevents.data.database.Database
 import com.paf.londonevents.data.database.EventDao
 import com.paf.londonevents.data.parsers.EventListParser
 import com.paf.londonevents.domain.service.EventsService
@@ -20,7 +21,7 @@ import retrofit2.Response
 object EventsRepository: EventsRemoteDataSource, HasDependencies {
 
     private val service : EventsService by lazy { getDependency<EventsService>() }
-    private val localEventService: EventDao by lazy { MainApplication.database.eventDao() }
+    private val localEventService: EventDao by lazy { Database.database.eventDao() }
 
     override fun searchEvents(eventTitle: String?): Observable<List<Event>> {
         val events = getEventsWithParams(eventTitle)
@@ -28,9 +29,7 @@ object EventsRepository: EventsRemoteDataSource, HasDependencies {
         return Observables.zip(events, favorites) { eventList, favoriteList ->
 
             eventList.forEach { event ->
-                if(favoriteList.any { event.id == it.id }){
-                    event.isFavorite = true
-                }
+                event.isFavorite = favoriteList.any { event.id == it.id }
             }
             eventList
         }
