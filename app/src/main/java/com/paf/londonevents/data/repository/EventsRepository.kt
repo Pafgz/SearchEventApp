@@ -43,6 +43,7 @@ object EventsRepository: EventsRemoteDataSource, HasDependencies {
             params["city"] = "london"
             params["locale"] = "en-gb"
             params["size"] = "50"
+            params["sort"] = "date,asc"
             eventTitle?.let { params["keyword"] = eventTitle }
 
             service.fetchEvents(params).enqueue(object : Callback<String> {
