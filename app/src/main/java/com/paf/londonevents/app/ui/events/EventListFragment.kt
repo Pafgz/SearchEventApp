@@ -19,7 +19,6 @@ import com.paf.londonevents.app.viewmodel.EventListViewModel
 import com.paf.londonevents.core.datasource.DataLoadingState
 import com.paf.londonevents.core.datasource.DataLoadingState.*
 import com.paf.londonevents.core.model.Event
-import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -99,7 +98,10 @@ class EventListFragment: Fragment(), SwipeRefreshLayout.OnRefreshListener, Event
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                { result -> listViewModel.onLoadListSuccess(result) },
+                { result ->
+                    listViewModel.onLoadListSuccess(result)
+                    recyclerView.smoothScrollToPosition(0)
+                },
                 { error -> listViewModel.onLoadListError(error) }
             )
     }
