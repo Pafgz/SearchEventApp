@@ -1,8 +1,8 @@
 package com.paf.londonevents.data.repository
 
 import com.paf.londonevents.app.HasDependencies
-import com.paf.londonevents.app.MainApplication
 import com.paf.londonevents.app.getDependency
+import com.paf.londonevents.app.utils.DateUtils
 import com.paf.londonevents.core.datasource.EventsRemoteDataSource
 import com.paf.londonevents.core.model.Event
 import com.paf.londonevents.data.common.JSON
@@ -44,6 +44,7 @@ object EventsRepository: EventsRemoteDataSource, HasDependencies {
             params["locale"] = "en-gb"
             params["size"] = "50"
             params["sort"] = "date,asc"
+            params["startDateTime"] = DateUtils.getCurrentDateTimeAsString().replace("\'", "")
             eventTitle?.let { params["keyword"] = eventTitle }
 
             service.fetchEvents(params).enqueue(object : Callback<String> {
