@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,13 +9,15 @@
     <ImageView
             android:id="@+id/eventImageView"
             android:layout_width="0dp"
-            android:layout_height="270dp"
+            android:layout_height="240dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:scaleType="centerCrop"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"/>
 
     <ImageView
@@ -50,7 +53,8 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 tools:text="Harry Potter And the Lion King on stage for a long time in London, Amazing"
-                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"/>
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"/>
 
         <TextView
                 android:id="@+id/venueNameView"
@@ -61,7 +65,8 @@
                 android:textColor="@color/white"
                 tools:text="Theatre"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="@+id/transparentFrame" android:gravity="right"/>
+                app:layout_constraintEnd_toEndOf="@+id/transparentFrame"
+                android:gravity="right"/>
 
         <TextView
                 android:id="@+id/dateView"

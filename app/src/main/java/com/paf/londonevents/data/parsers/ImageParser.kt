@@ -6,8 +6,8 @@ import org.json.JSONObject
 
 class ImageParser: JSONParser<Uri?> {
 
-    val MIN_WIDTH = 600
-    val MAX_WIDTH = 700
+    private val MIN_WIDTH = 600
+    private val MAX_WIDTH = 700
 
     override fun parse(json: JSON): Uri? {
         val images = json.jsonArrayOrNull("images")
