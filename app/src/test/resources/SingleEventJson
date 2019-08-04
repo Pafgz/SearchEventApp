@@ -1,7 +1,4 @@
 {
-  "_embedded": {
-    "events": [
-      {
         "name": "Chivas Guadalajara v. Club America",
         "type": "event",
         "id": "vvG18Z4m501KZN",
@@ -644,26 +641,3 @@
           ]
         }
       }
-    ]
-  },
-  "_links": {
-    "first": {
-      "href": "/discovery/v2/events?city=chicago&locale=en-us&page=0&size=1"
-    },
-    "self": {
-      "href": "/discovery/v2/events?size=1&city=chicago&page=0&locale=en-us"
-    },
-    "next": {
-      "href": "/discovery/v2/events?city=chicago&locale=en-us&page=1&size=1"
-    },
-    "last": {
-      "href": "/discovery/v2/events?city=chicago&locale=en-us&page=4000&size=1"
-    }
-  },
-  "page": {
-    "size": 1,
-    "totalElements": 4001,
-    "totalPages": 4001,
-    "number": 0
-  }
-}
