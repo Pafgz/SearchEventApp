@@ -1,7 +1,6 @@
 package com.paf.londonevents
 
 import android.net.Uri
-import com.paf.londonevents.data.parsers.EventListParser
 import com.paf.londonevents.data.parsers.ImageParser
 import org.junit.Assert.assertEquals
 import org.junit.Test

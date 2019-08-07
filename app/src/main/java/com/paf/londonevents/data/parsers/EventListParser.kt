@@ -12,8 +12,7 @@ import kotlin.collections.ArrayList
 class EventListParser: JSONParser<List<Event>> {
 
     override fun parse(json: JSON): List<Event> {
-        val content = json("_embedded") ?: json
-        val events = content.jsonArrayOrNull("events") ?: json.jsonArrayOrNull("events")
+        val events = json.jsonArrayOrNull("_embedded.events")
 
         val eventList = ArrayList<Event>()
 
@@ -40,8 +39,7 @@ class EventListParser: JSONParser<List<Event>> {
     }
 
     private fun parseVenueName(json: JSON): String?{
-        val content: JSON? = json("_embedded")
-        val venues: JSONArray? = content?.jsonArrayOrNull("venues")
+        val venues: JSONArray? = json?.jsonArrayOrNull("_embedded.venues")
 
         return if(venues != null && venues.length() > 0){
             val venue: JSON? = JSON(venues[0] as JSONObject)
@@ -55,9 +53,10 @@ class EventListParser: JSONParser<List<Event>> {
     }
 
     private fun parseDate(json: JSON): Date? {
-        val dates: JSON? = json("dates")
+       /* val dates: JSON? = json("dates")
         val startDate: JSON? = dates?.let { it("start") }
-        val dateTime: String? = startDate?.let { it("dateTime") }
+        val dateTime: String? = startDate?.let { it("dateTime") }*/
+        val dateTime: String? = json("dates.start.dateTime")
 
         return   dateTime?.let { DateUtils.getDateFromString(it) }
     }
