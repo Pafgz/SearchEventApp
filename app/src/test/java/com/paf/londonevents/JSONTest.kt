@@ -2,7 +2,6 @@ package com.paf.londonevents
 
 import com.paf.londonevents.data.common.JSON
 import com.paf.londonevents.data.common.invoke
-import com.paf.londonevents.data.common.jsonArrayOrNull
 import org.json.JSONArray
 import org.json.JSONObject
 import org.junit.Assert.assertEquals
@@ -28,10 +27,8 @@ class JSONTest {
             )
 
         var actualResult : JsonModel? = null
-        if (json != null) {
-            val eventJson = JSON(json[0] as JSONObject)
-            actualResult = parseTestModel(eventJson)
-        }
+        val eventJson = JSON(json[0] as JSONObject)
+        actualResult = parseTestModel(eventJson)
 
 
         assertEquals(expectedResult, actualResult)
@@ -50,7 +47,7 @@ private fun parseTestModel(json: JSON): JsonModel{
 }
 
 private fun parseVenueName(json: JSON): String?{
-    val venues: JSONArray? = json.jsonArrayOrNull("_embedded.venues")
+    val venues: JSONArray? = json("_embedded.venues")
 
     return if(venues != null && venues.length() > 0){
         val venue: JSON? = JSON(venues[0] as JSONObject)

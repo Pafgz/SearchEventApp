@@ -2,6 +2,7 @@ package com.paf.londonevents.data.parsers
 
 import android.net.Uri
 import com.paf.londonevents.data.common.*
+import org.json.JSONArray
 import org.json.JSONObject
 
 class ImageParser: JSONParser<Uri?> {
@@ -10,7 +11,7 @@ class ImageParser: JSONParser<Uri?> {
     private val MAX_WIDTH = 700
 
     override fun parse(json: JSON): Uri? {
-        val images = json.jsonArrayOrNull("images")
+        val images: JSONArray? = json("images")
         var imageUri: Uri? = null
 
         if (images != null && images.length() > 0){

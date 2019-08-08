@@ -86,20 +86,14 @@ inline operator fun <reified T> JSON.invoke(key: String): T? {
 
         val keys = key.split(".")
 
-        when {
-            keys.size == 2 -> {
-                val subJson = JSON(jsonObject.get(keys[0]) as JSONObject)
-                jsonKey = keys[1]
-                json = subJson
-            }
-            else -> {
-                val patternMatchLastKey = "\\.[^\\.]*\$"
-                val newKey = key.replace(Regex(patternMatchLastKey), "")
-                jsonKey = keys.last()
-
-                json = getKey(newKey)
-            }
+        var newKey = ""
+        keys.dropLast(1).forEachIndexed { i, item ->
+            if(i > 0) { newKey += "." }
+            newKey += item
         }
+
+        jsonKey = keys.last()
+        json = getKey(newKey)
     }
 
     return when (T::class) {
@@ -164,6 +158,23 @@ fun JSON.getKey(key: String): JSON {
     }
 
 }
+
+/*fun JSON.parsePathKey(): Pair<String, JSON>{
+
+    val keys = key.split(".")
+
+    var newKey = ""
+    keys.dropLast(1).forEachIndexed { i, item ->
+        if(i > 0) { newKey += "." }
+        newKey += item
+    }
+
+    val result = Pair<String, JSON>()
+    result.first = keys.last()
+    result.second = getKey(newKey)
+
+    return Pair
+}*/
 
 fun isPathKey(key: String): Boolean = key.contains(".")
 
