@@ -1,9 +1,9 @@
 package com.paf.londonevents.data.parsers
 
 import android.net.Uri
-import com.paf.londonevents.data.common.*
 import org.json.JSONArray
 import org.json.JSONObject
+import com.paf.londonevents.data.common.*
 
 class ImageParser: JSONParser<Uri?> {
 

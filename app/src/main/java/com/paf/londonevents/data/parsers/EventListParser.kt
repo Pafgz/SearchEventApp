@@ -56,5 +56,4 @@ class EventListParser: JSONParser<List<Event>> {
         return   dateTime?.let { DateUtils.getDateFromString(it) }
     }
 
-
 }
