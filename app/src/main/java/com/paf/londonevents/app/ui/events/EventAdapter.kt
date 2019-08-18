@@ -65,7 +65,7 @@ class EventViewHolder(view: View): RecyclerView.ViewHolder(view) {
             venueNameView.text = event.venueName
             dateView.text = event.startDateTime?.getString()
 
-            if(event.isFavorite)  favoriteIcon.setImage(R.drawable.ic_full_favorite)
+            if(event.isFavorite) favoriteIcon.setImage(R.drawable.ic_full_favorite)
             else favoriteIcon.setImage(R.drawable.ic_empty_favorite)
 
             favoriteIcon.setOnClickListener { delegate?.onClickFavoriteIcon(event, favoriteIcon) }
