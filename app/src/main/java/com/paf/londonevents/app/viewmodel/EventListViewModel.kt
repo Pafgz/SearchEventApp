@@ -44,6 +44,7 @@ class EventListViewModel: ViewModel(), HasDependencies, ManagesCoroutines {
     }
 
     fun removeFromFavorites(event: Event) {
+        event.isFavorite = false
         launch {
             eventService.unSaveEvent(event)
         }
