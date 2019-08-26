@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.paging.PagedList
+import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -21,9 +23,9 @@ import com.paf.londonevents.core.datasource.DataLoadingState.*
 import com.paf.londonevents.core.model.Event
 import kotlinx.android.synthetic.main.list_layout.*
 
-class FavoriteEventListFragment: Fragment(), EventAdapter.Listener, SwipeRefreshLayout.OnRefreshListener {
+class FavoriteEventListFragment: Fragment(), EventPagedListAdapter.Listener, SwipeRefreshLayout.OnRefreshListener {
 
-    private lateinit var eventAdapter: EventAdapter
+    private lateinit var eventAdapter: EventPagedListAdapter
     private val listViewModel: FavoriteEventListViewModel by lazy {
         ViewModelProviders.of(this).get(FavoriteEventListViewModel::class.java)
     }
@@ -37,11 +39,11 @@ class FavoriteEventListFragment: Fragment(), EventAdapter.Listener, SwipeRefresh
 
         mainSearchView.visibility = GONE
 
-        eventAdapter = EventAdapter()
+        eventAdapter = EventPagedListAdapter()
         eventAdapter.delegate = this
         swipeRefreshView.setOnRefreshListener(this)
 
-        listViewModel.loadFavoriteEvents()
+        //listViewModel.loadFavoriteEvents()
         observeViewModel()
 
         val layoutManager = LinearLayoutManager(activity)
@@ -52,8 +54,8 @@ class FavoriteEventListFragment: Fragment(), EventAdapter.Listener, SwipeRefresh
 
     private fun observeViewModel(){
 
-        listViewModel.favoriteEventListLiveData.observe(this, Observer {
-            eventAdapter.setItems(it)
+        listViewModel.eventListLiveData.observe(this, Observer {
+            render(it)
         })
 
         listViewModel.dataStateLiveData.observe(this, Observer {
@@ -72,6 +74,10 @@ class FavoriteEventListFragment: Fragment(), EventAdapter.Listener, SwipeRefresh
         }
     }
 
+    private fun render(pagedNoteList: PagedList<Event>) {
+        eventAdapter.submitList(pagedNoteList)
+    }
+
     override fun addToFavorite(event: Event, favoriteIcon: ImageView) {
         favoriteIcon.setImage(R.drawable.ic_full_favorite)
         listViewModel.saveToFavorites(event)
@@ -83,6 +89,6 @@ class FavoriteEventListFragment: Fragment(), EventAdapter.Listener, SwipeRefresh
     }
 
     override fun onRefresh() {
-        listViewModel.loadFavoriteEvents()
+       // listViewModel.loadFavoriteEvents()
     }
 }

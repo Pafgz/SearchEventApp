@@ -9,7 +9,9 @@ object DateUtils {
 
     fun getCurrentDateTime(): Date = Date(System.currentTimeMillis())
 
-    fun getCurrentDateTimeAsString(): String = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").format(getCurrentDateTime())
-
+    fun getCurrentDateTimeAsString(): String = getCurrentDateTime().toJsonUsableString()
 }
 
+fun Date.toJsonUsableString() = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
+    .format(this)
+    .replace("\'", "")

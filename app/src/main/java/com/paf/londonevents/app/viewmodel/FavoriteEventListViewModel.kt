@@ -1,7 +1,10 @@
 package com.paf.londonevents.app.viewmodel
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.paging.LivePagedListBuilder
+import androidx.paging.PagedList
 import com.paf.londonevents.app.HasDependencies
 import com.paf.londonevents.app.getDependency
 import com.paf.londonevents.app.utils.CoroutineManager
@@ -10,6 +13,7 @@ import com.paf.londonevents.core.datasource.DataLoadingState
 import com.paf.londonevents.core.datasource.DataLoadingState.*
 import com.paf.londonevents.core.datasource.EventsRemoteDataSource
 import com.paf.londonevents.core.model.Event
+import com.paf.londonevents.data.events.EventsRepository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
@@ -19,7 +23,19 @@ class FavoriteEventListViewModel: ViewModel(), HasDependencies, ManagesCoroutine
 
     override var coroutineManager = CoroutineManager()
     val eventService: EventsRemoteDataSource by lazy { getDependency<EventsRemoteDataSource>() }
-    val favoriteEventListLiveData = MutableLiveData<List<Event>>()
+
+    val pageListConfig = PagedList.Config.Builder()
+        .setEnablePlaceholders(true)
+        .setInitialLoadSizeHint(5)
+        .setPageSize(10)
+        .setPrefetchDistance(0)
+        .setEnablePlaceholders(true)
+        .build()
+
+    val eventListLiveData : LiveData<PagedList<Event>> = LivePagedListBuilder(
+        EventsRepository.loadAllEvents(), pageListConfig)
+        .build()
+
     val dataStateLiveData = MutableLiveData<DataLoadingState>()
     val messageLiveData = MutableLiveData<String>()
     private var loadSubscription: Disposable? = null
@@ -54,7 +70,6 @@ class FavoriteEventListViewModel: ViewModel(), HasDependencies, ManagesCoroutine
 
     private fun onLoadListSuccess(eventList: List<Event>){
         dataStateLiveData.value = LOADED
-        favoriteEventListLiveData.value = eventList
     }
 
     private fun onLoadListError(error: Throwable) {

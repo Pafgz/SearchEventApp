@@ -6,7 +6,6 @@ import androidx.viewpager.widget.PagerAdapter
 import com.paf.londonevents.R
 import com.paf.londonevents.app.ui.events.EventListFragment
 import com.paf.londonevents.app.ui.events.FavoriteEventListFragment
-import com.paf.londonevents.data.repository.EventsRepository
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

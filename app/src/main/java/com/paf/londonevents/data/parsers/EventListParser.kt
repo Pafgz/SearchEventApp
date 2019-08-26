@@ -13,7 +13,7 @@ class EventListParser: JSONParser<List<Event>> {
 
     override fun parse(json: JSON): List<Event> {
         val content = json("_embedded") ?: json
-        val events = content.jsonArrayOrNull("events") ?: json.jsonArrayOrNull("events")
+        val events: JSONArray? = content("events") ?: json("events")
 
         val eventList = ArrayList<Event>()
 
@@ -40,8 +40,7 @@ class EventListParser: JSONParser<List<Event>> {
     }
 
     private fun parseVenueName(json: JSON): String?{
-        val content: JSON? = json("_embedded")
-        val venues: JSONArray? = content?.jsonArrayOrNull("venues")
+        val venues: JSONArray? = json("_embedded.venues")
 
         return if(venues != null && venues.length() > 0){
             val venue: JSON? = JSON(venues[0] as JSONObject)
