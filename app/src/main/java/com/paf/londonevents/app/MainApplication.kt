@@ -5,7 +5,7 @@ import androidx.room.Room
 import com.paf.londonevents.core.datasource.EventsRemoteDataSource
 import com.paf.londonevents.data.database.AppDatabase
 import com.paf.londonevents.data.database.Database
-import com.paf.londonevents.data.repository.EventsRepository
+import com.paf.londonevents.data.events.EventsRepository
 import com.paf.londonevents.domain.ApiProvider
 import com.paf.londonevents.domain.service.EventsService
 

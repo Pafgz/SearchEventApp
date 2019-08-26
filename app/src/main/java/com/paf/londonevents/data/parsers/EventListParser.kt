@@ -12,8 +12,8 @@ import kotlin.collections.ArrayList
 class EventListParser: JSONParser<List<Event>> {
 
     override fun parse(json: JSON): List<Event> {
+      
         val events: JSONArray = json("_embedded.events")!!
-
         val eventList = ArrayList<Event>()
 
         for (i in 0 until events.length()) {

@@ -105,6 +105,7 @@ inline fun <reified T> getSingleValue(json: JSON, key: String): T? {
     }
 }
 
+
 inline operator fun <reified T> JSON.invoke(key: String, parser: JSONParser<T>): T? {
     return jsonOrNull(key)?.let { return parser.parse(it) }
 }

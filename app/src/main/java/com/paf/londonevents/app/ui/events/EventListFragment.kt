@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.paging.PagedList
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -26,9 +27,9 @@ import kotlinx.android.synthetic.main.list_layout.*
 import java.util.concurrent.TimeUnit
 
 
-class EventListFragment: Fragment(), SwipeRefreshLayout.OnRefreshListener, EventAdapter.Listener {
+class EventListFragment: Fragment(), SwipeRefreshLayout.OnRefreshListener, EventPagedListAdapter.Listener {
 
-    private lateinit var eventAdapter: EventAdapter
+    private lateinit var eventAdapter: EventPagedListAdapter
     private var searchSubscription: Disposable? = null
 
     private val listViewModel: EventListViewModel by lazy {
@@ -42,11 +43,10 @@ class EventListFragment: Fragment(), SwipeRefreshLayout.OnRefreshListener, Event
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        eventAdapter = EventAdapter()
+        eventAdapter = EventPagedListAdapter()
         eventAdapter.delegate = this
         swipeRefreshView.setOnRefreshListener(this)
 
-        listViewModel.loadEvents()
         observeViewModel()
 
         val layoutManager = LinearLayoutManager(activity)
@@ -60,7 +60,7 @@ class EventListFragment: Fragment(), SwipeRefreshLayout.OnRefreshListener, Event
     private fun observeViewModel(){
 
         listViewModel.eventListLiveData.observe(this, Observer {
-            eventAdapter.setItems(it)
+            eventAdapter.submitList(it)
         })
 
         listViewModel.dataStateLiveData.observe(this, Observer {
@@ -99,7 +99,7 @@ class EventListFragment: Fragment(), SwipeRefreshLayout.OnRefreshListener, Event
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 { result ->
-                    listViewModel.onLoadListSuccess(result)
+                    listViewModel.onLoadListSuccess(result.eventList)
                     recyclerView.smoothScrollToPosition(0)
                 },
                 { error -> listViewModel.onLoadListError(error) }
@@ -107,7 +107,7 @@ class EventListFragment: Fragment(), SwipeRefreshLayout.OnRefreshListener, Event
     }
 
     override fun onRefresh() {
-        listViewModel.loadEvents()
+        listViewModel.refresh()
     }
 
     override fun onDestroy() {

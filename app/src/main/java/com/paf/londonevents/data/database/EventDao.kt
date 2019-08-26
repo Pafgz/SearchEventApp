@@ -1,5 +1,6 @@
 package com.paf.londonevents.data.database
 
+import androidx.paging.DataSource
 import androidx.room.*
 import com.paf.londonevents.core.model.Event
 import io.reactivex.Observable
@@ -8,6 +9,9 @@ import io.reactivex.Observable
 interface EventDao {
     @Query("SELECT * FROM event WHERE is_favorite = 1")
     fun getAllFavoriteEvents(): Observable<List<Event>>
+
+    @Query("SELECT * FROM event")
+    fun getAllEvents(): DataSource.Factory<Int, Event>
 
     @Query("SELECT * FROM event WHERE id = :id AND is_favorite = 1")
     fun getFavoriteEventWithId(id: String): Observable<Event>

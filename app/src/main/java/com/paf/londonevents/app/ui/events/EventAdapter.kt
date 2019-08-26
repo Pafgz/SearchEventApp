@@ -50,25 +50,3 @@ class EventAdapter: RecyclerView.Adapter<EventViewHolder>(), EventViewHolder.Lis
         }
     }
 }
-
-class EventViewHolder(view: View): RecyclerView.ViewHolder(view) {
-    interface Listener {
-        fun onClickFavoriteIcon(event: Event, favoriteIcon: ImageView)
-    }
-
-    var delegate: Listener? by WeakReference()
-
-    fun bind(event: Event){
-        itemView.apply {
-            event.imageUri?.let { eventImageView.setImage(it) }
-            eventNameView.text = event.name
-            venueNameView.text = event.venueName
-            dateView.text = event.startDateTime?.getString()
-
-            if(event.isFavorite) favoriteIcon.setImage(R.drawable.ic_full_favorite)
-            else favoriteIcon.setImage(R.drawable.ic_empty_favorite)
-
-            favoriteIcon.setOnClickListener { delegate?.onClickFavoriteIcon(event, favoriteIcon) }
-        }
-    }
-}
