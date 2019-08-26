@@ -70,7 +70,6 @@ inline operator fun <reified T> JSON.invoke(key: String): T? {
     return getValue(this, key)
 }
 
-
 // Null getters with json("id")
 inline fun <reified T> getValue(json: JSON, key: String): T? {
     if (isKeyPath(key)) {
@@ -88,7 +87,6 @@ inline fun <reified T> getValue(json: JSON, key: String): T? {
     }
     return getSingleValue(json, key)
 }
-
 
 inline fun <reified T> getSingleValue(json: JSON, key: String): T? {
     if(key.isBlank() || json.jsonObject.length() < 1 || !json.jsonObject.has(key)) {
@@ -135,6 +133,5 @@ fun JSON.jsonOrNull(key: String): JSON? {
     }
     return null
 }
-
 
 fun isKeyPath(key: String) = key.contains(".")
